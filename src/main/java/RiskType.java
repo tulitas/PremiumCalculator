@@ -1,0 +1,4 @@
+enum RiskType {
+  FIRE,
+  WATER
+}
