@@ -1,6 +1,7 @@
 public class PremiumCalculator {
 
 
+
     public static void main(String[] args) {
         calculate();
     }
@@ -32,8 +33,9 @@ public class PremiumCalculator {
             return 0.023;
         }
         return 0.013;
-
     }
+
+
 
     double getWaterCoefficient(Double sumInsuredFire) {
         if (sumInsuredFire >= 10) {
