@@ -12,14 +12,18 @@ public class PremiumCalculator {
         policyObject.setObjectName("Flat");
         Policy policy = new Policy();
         policy.setPolicyNumber("LV19-07-100000-1");
+        policy.setPolicyStatus(PolicyStatus.APPROVED);
         PolicySubObject policySubObject = new PolicySubObject();
         policySubObject.setSubObjectName("TV");
-        PolicyStatus policyStatus = PolicyStatus.APPROVED;
+        RiskType riskTypeFire = RiskType.FIRE;
+        RiskType riskTypeWater = RiskType.WATER;
 
         System.out.println("Policy Nr.: " + policy.getPolicyNumber());
-        System.out.println("Policy object name: " + policyObject.getObjectName());
-        System.out.println("Policy subobject name: " + policySubObject.getSubObjectName());
-        System.out.println("Policy status: " + policyStatus);
+        System.out.println("Policy object name: " + policyObject.getObjectName() + ", " + " risk type: " + riskTypeFire
+                + ", " + riskTypeWater);
+        System.out.println("Policy subobject name: " + policySubObject.getSubObjectName() + ", " + " risk type: " + riskTypeFire
+                + ", " + riskTypeWater);
+        System.out.println("Policy status: " + policy.getPolicyStatus());
 
     }
 
@@ -28,6 +32,7 @@ public class PremiumCalculator {
             return 0.023;
         }
         return 0.013;
+
     }
 
     double getWaterCoefficient(Double sumInsuredFire) {
@@ -36,4 +41,5 @@ public class PremiumCalculator {
         }
         return 0.1;
     }
+
 }
