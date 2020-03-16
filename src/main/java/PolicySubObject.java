@@ -26,8 +26,9 @@ class PolicySubObject {
     return insuredSum;
   }
 
-  public void setInsuredSum(double insuredSum) {
+  public double setInsuredSum(double insuredSum) {
     this.insuredSum = insuredSum;
+    return insuredSum;
   }
 
   public RiskType getRiskType() {

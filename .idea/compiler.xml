@@ -7,7 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="PremiumCalculator" />
+        <module name="premiumcalculator" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="11" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="premiumcalculator" options="--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED" />
+    </option>
   </component>
 </project>
